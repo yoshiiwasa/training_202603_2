@@ -1,0 +1,81 @@
+@charset "utf-8";
+
+/* 1. ページ全体の文字サイズ調整 */
+body {
+  font-family: sans-serif;
+  padding: 20px;
+}
+
+/* 2. 入力欄とボタンの余白 */
+#zipcode {
+  width: 180px;
+  padding: 2px;
+}
+
+button {
+  cursor: pointer;
+  padding: 2px 10px;
+  margin-left: 5px; /* ボタン同士の隙間 */
+}
+
+/* 3. 「郵便番号：」のテキスト（表の上下） */
+#zip-display, #zip-display-bottom {
+  margin: 10px 0;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+/* 4. テーブルのデザイン（最重要） */
+table {
+  width: 100%;
+  border-collapse: collapse; /* 枠線を1本にする */
+  margin-top: 5px;
+}
+
+th, td {
+  border: 1px solid black;
+  padding: 4px 8px; /* パディングを詰めて画像に寄せる */
+  text-align: center;
+  font-size: 13px; /* 少し小さめに */
+}
+
+/* ヘッダーの色を画像に近い「くすんだ赤」に設定 */
+th {
+  background-color: #cd7f7f; 
+  color: black;
+  font-weight: bold;
+}
+
+/* セルの背景を白にする */
+td {
+  background-color: #ffffff;
+}
+
+h3 {
+  margin-top: 0;    /* 上の余白をゼロにする */
+  margin-bottom: 5px; /* 下（入力欄との間）も少し詰めたい場合はここを調整 */
+
+  .hint-bubble {
+  position: absolute;
+  top: 40px;      /* バーのすぐ下 */
+  left: 10px;
+  background: #333; /* 落ち着いた黒系（白バーに映える） */
+  color: #fff;
+  padding: 5px 12px;
+  border-radius: 6px;
+  font-size: 11px;
+  white-space: nowrap;
+  z-index: 100;
+}
+
+/* 吹き出しの「しっぽ（三角）」 */
+.hint-bubble::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 10px;
+  border: 5px solid transparent;
+  border-bottom-color: #333;
+}
+
+}
