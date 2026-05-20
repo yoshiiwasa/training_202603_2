@@ -6,17 +6,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>郵便番号</title>
   <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-  郵便番号を入力してください
-  <input id="input" class="zipcode" type="text" value="" placeholder="例:1234567">
-  <button id="search" type="button" disabled>検索</button>
+  <form>
+    <h2>郵便番号を入力してください</h2>
+    <input id="input" class="zipcode" type="text" value="" placeholder="例:1234567">
+    <button id="search" type="button" disabled>検索</button>
+    <button type="reset" disabled>リセット</button>
+  </form>
+
   <p id="keikoku"></p>
   <p id="error"></p>
   <p id="provided"></p>
+
   <div id="address-list">
-    
   </div>
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  
+  <script src="main.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 </body>
