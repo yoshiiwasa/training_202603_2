@@ -1,24 +1,63 @@
 body {
-  margin:40px;
-  background-color:lightcyan
+  margin: 40px;
+  background-color: rgba(255, 225, 224, 0.842);
+  font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
 }
 
 form {
-   /* border: 1px solid black;
+  /* border: 1px solid black;
    border-radius:8px; */
-   padding: 16px;
-   text-align: center;
+  padding: 16px;
+  text-align: center;
 }
 
-
-input{
-  width:200px;
+input {
+  width: 200px;
 }
 
-p {
-  text-align:center;
+#search {
+  font-weight: bold;
 }
 
-#preset {
-  text-align:center;
+h1 {
+  font-size: 36px;
+  font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+}
+
+#resultP-container {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.Element {
+  font-size: 12px;
+  text-align: center;
+}
+
+#history {
+  border-top: 1px solid black;
+}
+
+ul {
+  display: flex;
+  flex-direction: column-reverse;
+  list-style: none;
+  text-align: center;
+  padding: 0px;
+
+}
+
+li {
+  margin-top: 8px;
+}
+
+#resetUl {
+  text-align: center;
+  margin-top: 40px;
+}
+
+#clearAddressList {
+  color: red;
+
 }
