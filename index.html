@@ -2,48 +2,39 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <title>郵便番号検索ツール</title>
-  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>郵便番号</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="style2.css">
 </head>
 <body>
+  <form>
+    <h1>郵便番号検索</h1>
+    <input id="input" class="zipcode" type="text" value="" placeholder="例:1234567または123-4567">
+    <button id="search" type="button">検索</button>
+    <button id="resets" type="reset">リセット</button>
+    <p class="Element">全角やハイフンありでも可能です。</p>
+  </form>
 
-  <!-- 入力エリア：枠線で囲ったメイン部分 -->
-  <div style="border: 1px solid black; padding: 5px; text-align: center; margin-bottom: 20px;">
-    <h3>郵便番号</h3>
-    <div style="text-align: left; padding-bottom: 20px; ">
-      <!-- autocomplete="off" でブラウザ独自の履歴をオフに -->
-      <input type="text" id="zipcode" inputmode="numeric" placeholder="例:1234567または123-4567" autocomplete="off">
-      <button id="search-btn">住所検索</button>
-      <button id="reset-btn">リセット</button>
+  <div id="resultP-container"></div>
+
+
+  <div id="history-container">
+
+    <div>
+      <p id="history" class="Element">--&ensp;&ensp;履歴&ensp;&ensp;--</p>
+      <ul id="address-list"></ul>
     </div>
-    
+
+    <div id="resetUl">
+      <button id="clearAddressList">履歴を削除</button>
+    </div>
+
   </div>
 
-  <!-- 上部の郵便番号表示エリア -->
-  <p id="zip-display"></p>
 
-  <!-- 結果表示テーブル -->
-  <table>
-    <thead>
-      <tr>
-        <th>zip code</th>
-        <th>住所1</th>
-        <th>住所2</th>
-        <th>住所3</th>
-        <th>住所1カナ</th>
-        <th>住所2カナ</th>
-        <th>住所3カナ</th>
-        <th>pref code</th>
-      </tr>
-    </thead>
-    <tbody id="result-body">
-      <!-- JavaScriptでここに「読み込み中...」や「住所データ」が入ります -->
-    </tbody>
-  </table>
 
-  <!-- 下部の郵便番号表示エリア -->
-  <p id="zip-display-bottom"></p>
-
-  <script src="main.js"></script>
+  <script src="main2.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 </body>
-</html>
