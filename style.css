@@ -1,6 +1,6 @@
 body {
   margin: 40px;
-  background-color: rgba(255, 225, 224, 0.842);
+  background-color: rgba(224, 243, 255, 0.788);
   font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
 }
 
@@ -21,13 +21,33 @@ input {
 
 h1 {
   font-size: 36px;
-  font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+}
+
+#resultP-container:empty {
+  background: transparent;
+  border-top: none;
+  border-bottom: none;
+  min-height: 0;
 }
 
 #resultP-container {
-  font-size: 24px;
+  font-size: 20px;
   font-weight: bold;
   text-align: center;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  background: rgba(255, 255, 255, 0.6);
+  min-height: 24px;
+}
+
+#history-container {
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.6);
+  max-width: 560px;
+  width: 90%;
+  box-sizing: border-box;
+  margin: 60px auto;
+  border-radius: 16px;
 }
 
 .Element {
@@ -36,7 +56,8 @@ h1 {
 }
 
 #history {
-  border-top: 1px solid black;
+  font-size: 16px;
+  font-weight: bold;
 }
 
 ul {
@@ -45,19 +66,17 @@ ul {
   list-style: none;
   text-align: center;
   padding: 0px;
-
 }
 
 li {
   margin-top: 8px;
+  font-size: 14px;
 }
 
 #resetUl {
   text-align: center;
-  margin-top: 40px;
 }
 
 #clearAddressList {
   color: red;
-
 }
